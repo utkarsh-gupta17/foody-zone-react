@@ -70,7 +70,7 @@ const App = () => {
             <img src="/public/Foody Zone.png" alt="" />
           </div>
           <div className="search">
-            <input onChange={SearchFood} type="text" placeholder="Search Food.." />
+            <input onChange={SearchFood} type="text" placeholder="Search Food" />
           </div>
         </TopContainer>
         <FilterContainer>
@@ -108,6 +108,9 @@ const TopContainer = styled.section`
       height: 2.5rem;
       font-size: 1rem;
       padding: 0 0.25rem;
+      &::placeholder{
+        color: white;
+      }
     }
   }
   @media (0<width<600px) {
@@ -123,6 +126,7 @@ const FilterContainer = styled.section`
 `;
 export const Button = styled.button`
   background: ${({isSelected})=>(isSelected ? "#f22f2f":"#ff4343")};
+  outline: 1px solid ${({isSelected})=>(isSelected ? "white":"#ff4343")};
   border-radius: 0.3125rem;
   padding: 0.375rem 0.75rem;
   border: none;
